@@ -1,10 +1,14 @@
 import React from 'react'
+import Card from './Card'
+
+
 
 export default function PlayersHand() {
   return (
-    <section className='flex bg-red-100 content-center justify-center'>
-    <div className='flex p-5'> card one </div>
-    <div className='flex p-5'> card one </div>
+    <section className='flex bg-green-400 content-center justify-center gap-3 p-8'>
+      <Card/>
+        <Card/>
+        <Card/>
     </section>
   )
 }
