@@ -7,6 +7,7 @@ export default function Card() {
 
 let number = Math.floor(Math.random() * 13) +1  
 let suit = Math.floor(Math.random() * 4) +1 
+let CardValue = number
 
 // const [suit, setSuit] = useState("TOAST")
 
@@ -32,15 +33,19 @@ if (chosenSuit === 4){
 // set the card from the random function 
 if (number === 11) {
     number = "J"
+    CardValue = 10
 }
 if (number === 12) {
     number = "Q"
+    CardValue = 10
 }
 if (number === 13) {
     number = "K"
+    CardValue = 10
 }
 if (number === 1) {
     number = "A"
+    CardValue = 10
 }
 
 
@@ -50,7 +55,7 @@ if (number === 1) {
     <div className=' p-1 flex flex-col bg-stone-200 min-w-[60px] border-solid border-2 border-sky-950 hover:border-sky-500'>
       <p className='align-left'>{number}</p>
       <p className=' flex justify-center'>{suit}</p>
-      <p className=' flex justify-end'>{number}</p>
+      <p className=' flex justify-end'>{CardValue}</p>
 
 
     </div>
